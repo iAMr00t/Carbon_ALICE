@@ -8,17 +8,12 @@
 #<src>                                      <mnt_point>      <type>  <mnt_flags and options>                                <fs_mgr_flags>
 /dev/block/platform/soc.0/by-name/system       /system         ext4    ro,barrier=1                                                    wait
 /dev/block/platform/soc.0/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
-/dev/block/platform/soc.0/by-name/cache        /cache          f2fs    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/platform/soc.0/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
-/dev/block/platform/soc.0/by-name/userdata     /data           f2fs    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
 /dev/block/platform/soc.0/by-name/boot         /boot           emmc    defaults                                                        defaults
 /dev/block/platform/soc.0/by-name/recovery     /recovery       emmc    defaults                                                        defaults
-/dev/block/platform/soc.0/by-name/misc         /misc           emmc    defaults                                                        defaults
-/dev/block/platform/soc.0/by-name/modem        /firmware       vfat    ro,relatime                                                     wait
 /dev/block/platform/soc.0/by-name/log          /log            vfat    uid=1000,gid=1007,fmask=0007,dmask=0007                         wait,check
 
-
 /devices/soc.0/7864900.sdhci/mmc_host       auto             vfat    defaults                                               voldmanaged=sdcard1:auto,noemulatedsd
-/devices/platform/msm_hsusb                 /storage/usbotg  vfat    nosuid,nodev                                           wait,voldmanaged=usbotg:auto
+/devices/platform/msm_hsusb                 /storage/usbotg  vfat    nosuid,nodev                                           voldmanaged=usbotg:auto
 
 /dev/block/zram0                            none             swap    defaults zramsize=268435456
